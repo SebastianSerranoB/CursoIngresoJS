@@ -13,12 +13,29 @@ function mostrar()
 						// depende
 						// dos barras *// son comentario , el programa no las ejecuta , podemos dejar
 						// en suspenso una linea de codigo para probar otra sin tener que eliminarla,
-nombre = prompt("ingrese su nombre");
+	nombre = prompt("ingrese su nombre");
+	
 
 alert(nombre);
 
 
 
 		//prompt es tambien una funcion nativa de js , nos da una ventana emergente pero nos permite escribir un
-				// dato en esa ventana y me permite darle ok o cancelar luego nos devuelve el dat
+				// dato en esa ventana y me permite darle ok o cancelar luego nos devuelve el dat}
+
+
+/* Serrano Sebastian -Division Z
+-Ejercicio E/S 02
+
+/*
+Debemos lograr tomar un nombre con 'prompt' 
+y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
+
+/*function mostrar()
+{	
+	let nombre;
+	nombre = prompt("ingrese su nombre");
+
+	alert(nombre);
 }
+/*
