@@ -45,6 +45,24 @@ function Circulo ()
     // ademas me estan quedando afuera largo y ancho , intuyo hay que usarlos
 }
 function Materiales () 
-{
+{   
+    let largo;
+    let ancho;
+    let superficie;
+    let cemento;
+    let cal;
+
+    largo = document.getElementById("txtIdLargo").value;
+    largo = parseFloat(largo);
+    
+    ancho = document.getElementById("txtIdAncho").value;
+    ancho = parseInt(ancho);
+
+    superficie = largo * ancho; // base.altura
+    cemento = superficie * 2;
+    cal = superficie * 3;
+
+    alert("se necesitan " + cemento + " bolsas de cemento y " + cal + " de cal");
 	
 }
+// 2 cem y 3 cal . 1m^2
