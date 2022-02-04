@@ -13,7 +13,6 @@ function mostrarAumento()
 	let descuento;
 	let resultado;
 	
-
 	importe = document.getElementById("txtIdImporte").value;
 	importe = parseInt(importe);
 
@@ -24,8 +23,6 @@ function mostrarAumento()
 
 } 
 
-	//alert(total);
-	//txtIdResultado
-	/* el = resultado debe ir del lado derecho si no no funciona, 
-//el = es un operador de asignacion , es importante
-}
+	
+	/* el = resultado debe ir del lado derecho si no, no funciona, 
+	 el = es un operador de asignacion */

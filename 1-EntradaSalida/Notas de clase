@@ -10,3 +10,6 @@ puedo reenviar a mi mail el trabajo ** por dudas sobre entregas , para decir que
 entregue hasta el ejercicio 8
 
 Para mañana 04/02 primeros 3 tps listos , 
+
+Math.Round redondea decimalas a enteros , si fuera 0,6 seria uno si fuera 0,4 seria -1 
+float te permite hasta dos decimales

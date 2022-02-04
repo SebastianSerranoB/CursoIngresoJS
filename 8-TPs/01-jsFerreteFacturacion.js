@@ -25,9 +25,10 @@ function Sumar ()
 
     total = precioUno + precioDos + precioTres;
 
-    alert("el total es de " + total); 
+    alert("el total es: " + total); 
 	
 }
+
 function Promedio () 
 {  
     let precioUno;
