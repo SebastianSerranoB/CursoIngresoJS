@@ -1,3 +1,4 @@
+
 function mostrar()
 
 {   let diametroMayor;
@@ -52,4 +53,23 @@ function mostrar()
      
     alert(texto);
     
+}
+
+
+
+
+
+    
+
+
+
+
+//metros de papel , los obtenemos sacando el area total
+//metros de varillas , los obtenemos sacando el perimetro total
+//producto de ambos catetos divido por 2 = area triangulo rectangulo
+//lineas b a c    y lineas b a a , con el dato de esos lados sacamos todo
+
+
+
+
 }

@@ -13,3 +13,8 @@ Para mañana 04/02 primeros 3 tps listos ,
 
 Math.Round redondea decimalas a enteros , si fuera 0,6 seria uno si fuera 0,4 seria -1 
 float te permite hasta dos decimales
+
+
+math.round si tenes un 4.9 te redondea 5 esa es la funcion 
+el to.fixed 
+el integer y el float lo que hacen es convertir una cadena string a entero o decimal , 
