@@ -1,0 +1,8 @@
+Comillas dobles suele utilizarse para una cadena de varios elementos , 
+comillas simples para una cadena de una sola unidad. 1
+operacion == me retorna un boolean en el if() ,"=" no retorna boolean, true/false
+Condicionales if/else
+"NO" "Y" "O" CONECTORES  
+"&&" es "Y" "and" (ambas condiciones deben darse) 
+"||" es "or"(alguna de las condiciones)
+los operadores logicos actuan por cortocircuito

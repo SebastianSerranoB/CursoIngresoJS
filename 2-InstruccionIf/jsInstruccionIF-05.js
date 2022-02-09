@@ -1,6 +1,18 @@
+/* Serrano Sebastian -Division Z
+Ejercicios IF/ELSE 5 
+*/
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
+	
+	edad = document.getElementById("txtIdEdad").value;
+	edad = parseInt(edad);
 
-}//FIN DE LA FUNCIÓN
+	if(edad < 13 || edad > 17)            // "||" no exige que se cumplan las dos,con una es suficiente.
+	{
+		alert("no es adolescente.");
+
+	}
+	alert("es un adolescente");
+}

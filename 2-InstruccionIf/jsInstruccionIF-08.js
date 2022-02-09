@@ -1,3 +1,7 @@
+/* Serrano Sebastian -Division Z
+IF/ELSE EJ 8
+*/
+
 function mostrar()
 {
 	//tomo la edad  
