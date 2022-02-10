@@ -6,3 +6,29 @@ Condicionales if/else
 "&&" es "Y" "and" (ambas condiciones deben darse) 
 "||" es "or"(alguna de las condiciones)
 los operadores logicos actuan por cortocircuito
+
+/*
+function mostrar()
+{
+
+let nota;
+let mensaje;
+
+mensaje = "Vamos, la proxima se puede";
+
+nota = Math.floor(Math.random() + 11);
+
+if(nota > 8)
+{
+	mensaje = "EXCELENTE";
+	alert(mensaje);
+}
+else
+{
+	if(nota > 3 && nota < 9)
+	mensaje = "APROBÓ";
+	alert(mensaje);
+}
+
+alert(mensaje);
+/*

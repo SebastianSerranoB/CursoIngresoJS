@@ -12,14 +12,14 @@ function mostrar()
 	let edad;
 	let estadoCivil;
 	
-	edad = txtIdEdad.value;
+	edad = document.getElementById("txtIdEdad").value;
 	edad = parseInt(edad);
 
-	estadoCivil = estadoCivil.value;
-	estadoCivil = parseStr(estadoCivil);
+	estadoCivil = document.getElementById("estadoCivil").value;
+	        //el tema es pedir este dato correctamente
 	
 	
-	if(edad <18 && estadoCivil!= "Soltero")
+	if(edad < 18 && estadoCivil!= "Soltero")
 	{
 		alert("Es muy pequeñ@ para no ser solter@");
 	}
