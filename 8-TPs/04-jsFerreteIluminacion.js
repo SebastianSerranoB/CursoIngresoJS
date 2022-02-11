@@ -20,45 +20,78 @@ function CalcularPrecio ()
 {
  	let cantidadDeLamparas;
     let marca;
-    let precio;
+    let precioInicial;
     let precioFinal;
     let descuento;
-
-    precioOferta = 35;
+    let operacionDescuento;
+    let impuesto;
+    let operacionImpuesto;
 
     marca = document.getElementById("Marca").value;
 
     cantidadDeLamparas = document.getElementById("txtIdCantidad").value;
-
-    precioFinal = precio - descuento;
-
+    cantidadDeLamparas = parseInt(cantidadDeLamparas);
     
-    if(cantidadDeLamparas == 6)
+    precioInicial = 35 * cantidadDeLamparas;
+   
+    if(cantidadDeLamparas > 5)
     {   
-        descuento = 0.50;
+        descuento = 0.5;
     }
-    
-    
-    
-    
-    
-    
-    precioFinal = precio - descuento;
+    else
+    {   if(cantidadDeLamparas == 5 && marca == "ArgentinaLuz")
+        {
+             descuento = 0.4;
+        }
+        else
+        {   if(cantidadDeLamparas == 5 && marca != "ArgentinaLuz")
+            {
+                descuento = 0.3;
+            }
+            else
+            {   if(cantidadDeLamparas == 4 && marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+                {
+                    descuento = 0.25;    
+                }
+                else
+                {   if(cantidadDeLamparas == 4 && marca != "ArgentinaLuz"  && marca != "FelipeLamparas")
+                    {
+                        descuento = 0.2;
+                    }
+                    else
+                    {   if(cantidadDeLamparas == 3 && marca == "ArgentinaLuz")
+                        {
+                            descuento = 0.15;
+                        }
+                        else
+                        {   if(cantidadDeLamparas == 3 && marca == "FelipeLamparas")
+                            {
+                                descuento = 0.1;
+                            }
+                            else
+                            {   if(cantidadDeLamparas == 3 && marca != "ArgentinaLuz" && marca != "FelipeLamparas")
+                                {
+                                  descuento = 0.05;  
+                                }
+                            }    
+                        }
+                    }
+                }
+            }
+        }
+    }
+    operacionDescuento = precioInicial * descuento;
+    precioFinal = precioInicial - operacionDescuento;
+
+    impuesto = 0.10;
+
+    if(precioFinal > 120)
+    {
+        operacionImpuesto = precioFinal * impuesto;
+        precioFinal = precioFinal + operacionImpuesto;
+        alert("Usted pago " + operacionImpuesto + "$ de IIBB");
+    }
     
     document.getElementById("txtIdprecioDescuento").value = precioFinal;
 
-    
-
-    
-    
-
-
-
-
-
-
-
-
-
 }
-// 0.50 es 50 porciento
