@@ -85,7 +85,7 @@ function CalcularPrecio ()
 
     impuesto = 0.10;
 
-    if(precioFinal > 120)
+    if(precioFinal >= 120)
     {
         operacionImpuesto = precioFinal * impuesto;
         precioFinal = precioFinal + operacionImpuesto;
@@ -95,3 +95,14 @@ function CalcularPrecio ()
     document.getElementById("txtIdprecioDescuento").value = precioFinal;
 
 }
+
+/* la forma correcta de hacer una logica , un if/else/switch
+es hacerlos todos en un mismo hilo , para que cuando de true , no pregunte por los demas
+y no hagamos un uso ineficiente de los recursos, exigiendo al procesador ya que ejecutaria
+un  if todas las veces 
+hay que ser optimos con el uso del if , no preguntar innecesariamente, procesos innecesarios o que puedne obviarse
+- para ciertos casos se anida asi , que es lo que estamos haciendo en este ejercicio , pero en general no se hace
+asi sino que se utiliza el switch , esto es muuuuy rebuscado */
+
+//Depurador f11 consola SUPERUTIL Debuggear , depurar
+//Rehacer buscando velocidad
