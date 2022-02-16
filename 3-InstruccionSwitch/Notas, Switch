@@ -1,0 +1,14 @@
+Switch
+case " ";
+do ;
+break
+default
+
+el switch siempre compara por igualdad , 
+hay casos en los que utilizaremos switch y casos para un if
+
+meses = txtIdMes.value.toLowerCase = Enero , eNEro, enero,enerO --> "enero"
+meses = txtIdMes.value.toUpperCase --> "ENERO"
+para blindar el codigo, es decir protegerlo de fallas que nos lo rompan ,
+me aseguro que el dato siempre ingrese de la manera que quiero "enero" o "ENERO" , tambien
+hay funciones para que entre primero con matyuscula "Enero" , 

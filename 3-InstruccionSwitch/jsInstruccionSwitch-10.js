@@ -1,6 +1,72 @@
+/* Sebastian Serrano -Division Z
+Switch EJ 10 */
+
 function mostrar()
 {
-	var estacionIngresada =txtIdEstacion.value;
-	alert(estacionIngresada);
+	let estacion;
+	let destino;
+	let mensaje;
+	
+	destino = txtIdDestino.value;
+	
+	estacion = txtIdEstacion.value;
 
-}//FIN DE LA FUNCIÓN
+	switch(estacion)
+	{
+		case "Invierno":
+			switch(destino)
+			{
+				case "Bariloche":
+					mensaje = "Se viaja.";
+					
+					break;
+				
+				default:
+					mensaje = "No se viaja.";
+					
+					break;
+			}
+		break;
+		
+		case "Verano":
+			switch(destino)
+			{	
+				case "Cataratas":
+				case "Mar del plata":
+					mensaje = "Se viaja.";
+				
+				break;
+
+				default:
+					mensaje = "No se viaja.";
+					break;
+			}
+		break;
+		
+		case "Otoño":
+			mensaje = "Se viaja.";
+			break;		
+
+		case "Primavera":
+			switch(destino)
+			{
+				case "Bariloche":
+					mensaje = "No se viaja.";
+				break;
+			
+			
+				default:
+					mensaje = "Se viaja.";
+					break;
+			}
+		break
+
+		default:
+			mensaje = "Incorrecto , ingrese nuevamente:";
+			break;
+		
+	}
+
+	alert(mensaje);
+	
+}

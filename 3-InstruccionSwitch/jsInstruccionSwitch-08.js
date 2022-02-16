@@ -1,6 +1,31 @@
+/* Sebastian Serrano -Division Z
+Switch EJ 8  */
+
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destino;
+	destino = txtIdDestino.value;
+	
 
-}//FIN DE LA FUNCIÓN
+	switch(destino)
+	{
+		case "Bariloche":
+			alert("y .. llevate un abrigo");
+			break;
+		case "Cataratas":
+			alert("Un calor infernal")
+			break;
+		case "Mar del plata":
+			alert("Hace calor, llevate protector solar");
+			break;
+		case "Ushuaia":
+			alert("Ice cold");
+			break;
+
+		default:
+			alert("Ingrese otro destino:");
+			break;
+	}
+	
+
+}
