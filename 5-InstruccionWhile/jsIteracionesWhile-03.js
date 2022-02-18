@@ -1,8 +1,21 @@
-/*
+/* Sebastian Serrano
+   Division Z
+   while ej 03
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
-	var claveIngresada;
-	claveIngresada = prompt("ingrese el número clave.");
+	let claveIngresada;
+	let claveValida;
+
+	claveValida = "utn750";
 	
-}//FIN DE LA FUNCIÓN
+	claveIngresada = prompt(" Ingrese la clave: ");
+
+	while(claveIngresada != claveValida)
+	{
+		
+		 claveIngresada = prompt("Clave incorrecta, intente nuevamente: ");
+
+	}
+	
+}

@@ -1,0 +1,43 @@
+while(condicion)
+{
+    sentencia
+
+    sentencia que me permita cambiar el valor de la condicion
+}
+
+var i ; //variable de control
+
+i = 0;  inicializamos de la variable de control, le asignamos el valor 0 o 1 
+
+while(i<10) //condicion
+{
+    i++;                                    //aca empieza a contar directamente desde el 1, porque ya suma una vez.
+    document.write(i + "<br>");
+    i = i + 1                               // incremento de la variable de control , ++ tambien es valido . (necesario para cambiar la condicion ya que sino el while generaria un bucle infinito , y crashearia el servidor programa)
+                    // si hago i++ aca abajo , debo hacer document.write(i + 1 "<br>") para que arranque contando desde 1.
+
+}
+"++" hace un incremento unario sobre la variable que tiene a la izquierda , ej: 1++ = 1 + 1 
+"document.write();"  otra forma de alert , console, etc muesta como una hoja limpia
+el "<br>" hace un salto de linea. //embebiendo html en js , "<h1>" incrementa de tamaño el html 
+
+CONTADOY Y ACUMULADOR ,
+
+contador:
+contador = contador + constante    i = i + 1
+
+acumulador:
+acumulador = acumulador + variable(valor)
+
+ejemplo: si yo me peso todas las  semanas , ejecuto un acumulador , el peso ganado o perdido no es fijo , es variable
+ejemplo: yo cuento todos los cumpleaños , ejecuto un contador, los años siempre van de a 1 , no varian , es constante.
+
+
+
+
+do while
+
+
+
+
+for
