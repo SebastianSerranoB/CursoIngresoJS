@@ -12,3 +12,144 @@ meses = txtIdMes.value.toUpperCase --> "ENERO"
 para blindar el codigo, es decir protegerlo de fallas que nos lo rompan ,
 me aseguro que el dato siempre ingrese de la manera que quiero "enero" o "ENERO" , tambien
 hay funciones para que entre primero con matyuscula "Enero" , 
+
+cross plataform y cross time .. porque hacer el document.getElementById("").value; en ves de txi.value;
+la diferencia es que el ultimo solo funciona para chrome , en cambio, el otro es multiplataforma y se mantiene a traves 
+del tiempo
+
+0.9 o 1.1 , para una misma variable de aumento y descuento , si 1 es el 100 , 1.1 es el 110 09 es el 9
+09. descuento del  10 porcuento , 1.1 aumento del 10
+si tenes muchos decimales y se te value
+funcion .toFixed(0);  es parecido a un math.round  , el toFixed, ignora los decimales , solo presta atencion a la
+la parte entera
+si queres que considere los primeros dos decimales , le pasass un (2)
+el () determina la cantidad de digitos decimales que toma en cuenta el toFixed
+entre parentesis va el argumento que le queres pasar para que considere
+10,1234   to.fixed(2); = 10,12   .. considera ,los dos primeros digitos decimales
+
+preciofinal = preciocobrado * descuento
+que puede ser 0.9 o 1.1
+para ahorrarte dos variables , aumento descuento e ir mas rapido , y se ve a simple vista
+
+contador++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/*
+Enunciado:
+una agencia de viajes debe sacar las tarifas de los viajes , se cobra $15.000 por cada estadia como base, se pide el ingreso de una estacion del año y localidad para vacacionar para poder calcular el precio final
+*/
+
+function mostrar()
+{
+	var estacionIngresada=txtIdEstacion.value;
+	var destino;
+	var precioCobrado;
+	var porcentaje;
+	var precioFinal;
+	var texto;
+
+	destino=document.getElementById("txtIdDestino").value; //crossplataform, crosstime
+
+	precioCobrado=15000;
+	//aumento=0;
+	//descuento=0;
+
+	switch(estacionIngresada)
+	{
+		//En Invierno: Bariloche tiene un aumento del 20%, Cataratas y Cordoba tiene un descuento del 10% y Mar del plata tiene un descuento del 20%.
+		case "Invierno":
+			switch(destino)
+			{
+				case "Bariloche":
+					porcentaje=1.2;
+				break;
+				
+				case "Mar del plata":
+					porcentaje=0.8;
+				break;
+
+				default:
+					porcentaje=0.9;
+				break;
+			}
+		break;
+		//En Verano: Bariloche tiene un descuento del 20%, Cataratas y Cordoba tiene un aumento del 10% y Mar del plata tiene un aumento del 20%.
+		case "Verano":
+			switch(destino)
+			{
+				case "Bariloche":
+					porcentaje=0.8;
+				break;
+
+				case "Mar del plata":
+					porcentaje=1.2;
+				break;
+
+				case "Cordoba": //default
+				case "Cataratas":
+					porcentaje=1.1;
+				break;
+			}
+		break;
+		//En Otoño y Primavera: Bariloche tiene un aumento del 10%, Cataratas tiene un aumento del 10%, Mar del plata tiene un aumento del 10% y Cordoba tiene el precio sin descuento.
+		default:
+			switch(destino)
+			{
+				case "Cordoba":
+					porcentaje=1; //sin porcentaje.
+				break;
+
+				default:
+					porcentaje=1.1;
+				break;
+			}
+		break;
+	}
+
+	precioFinal=precioCobrado*porcentaje;
+	texto="El destino es: "+destino+", en temporada "+estacionIngresada+" y su costo total es: $"+precioFinal+".";
+
+	alert(texto);
+}
+
+/*
+	precioFinal=precioCobrado+(precioCobrado*aumento/100)-(precioCobrado*descuento/100);
+	
+	precioFinal=precioCobrado*porcentaje (cuenta anterior general)
+		0.9 -> descuento del 10%
+		1.1 -> aumento del 10%
+*/
