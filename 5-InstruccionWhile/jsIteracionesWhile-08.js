@@ -1,19 +1,43 @@
 /*
+Serrano Sebastian
+Division Z
+Ej 8 while
+
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
+
 function mostrar()
 {
-	var contador;
-	var respuesta;
-	var sumaPositivos;
-	var multiplicacionNegativos;
-	contador=0;
-	sumaPositivos=0;
-	multiplicacionNegativos=1;
-	respuesta='si';
+	let numeroIngresado;
+	let acumuladorPositivo;
+	let acumuladorNegativo;
+	let respuesta;
 
+	
+	acumuladorPositivo = 0;
+	acumuladorNegativo = 1;
+	respuesta = "si";
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
+	
+	while(respuesta == "si")
+	{
+		numeroIngresado = prompt("Ingrese un numero entero: ");
+		numeroIngresado = parseInt(numeroIngresado);
+		
+		if(numeroIngresado < 0)
+		{
+			acumuladorNegativo = acumuladorNegativo * numeroIngresado;
+		}
+		else
+		{
+			acumuladorPositivo = acumuladorPositivo + numeroIngresado;
+		}
+				
+		respuesta = prompt("¿Desea ingresar un nuevo numero: si o no?").toLowerCase(respuesta);
 
-}//FIN DE LA FUNCIÓN
+	}
+
+	document.getElementById("txtIdSuma").value = acumuladorPositivo;
+	document.getElementById("txtIdProducto").value = acumuladorNegativo;
+
+}
