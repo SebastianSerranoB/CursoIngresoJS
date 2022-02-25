@@ -1,4 +1,4 @@
-function mostrar()
+/*function mostrar()
 {
 	let numeroIngresado;
 	let suma;
@@ -20,10 +20,10 @@ function mostrar()
 		contador = contador + 1;
 		suma = suma + numeroIngresado
 
-		pregunta = prompt("¿Desea ingresar otro numero? si o no?");
+		pregunta = prompt("¿Desea ingresar otro numero: si o no?").toLowerCase();
 		if(pregunta == "si")
 		{
-			numeroIngresado = prompt("Ingrese 5 numeros: ");
+			numeroIngresado = prompt("Ingrese otro numero: ");
 			numeroIngresado = parseInt(numeroIngresado);
 
 			contador = contador + 1;
@@ -72,10 +72,46 @@ function mostrar()
 			contador = contador + 1;
 
 			respuesta = prompt("Desea ingresar un nuevo numero? si o no?");
-		}
+		}+
 
 		promedio = acumulador / contador;
 
 		alert(promedio + suma);
+
+	}
+	*/
+	
+	//Enunciado:
+	//Al presionar el botón pedir números hasta que el USUARIO QUIERA e informar la suma acumulada y el promedio.
+	function mostrar()
+	{
+		let numeroIngresado;
+		let suma;
+		let contador;
+		let promedio;
+		let respuesta;
+
+		contador = 0;
+		suma = 0;
+
+		respuesta = "si";
+
+		while(respuesta == "si")
+		{
+			numeroIngresado = prompt("Ingrese un numero: ");
+			numeroIngresado = parseInt(numeroIngresado);
+
+			contador++;
+			suma = suma + numeroIngresado;
+
+			respuesta = prompt("¿Desea ingresar otro numero: si o no?").toLowerCase();
+
+		}
+
+		promedio = suma / contador;
+
+		txtIdSuma.value = "La suma total es de: " + suma;
+		txtIdPromedio.value = "El promedio de los numeros ingresados es de: " + promedio;
+
 
 	}
