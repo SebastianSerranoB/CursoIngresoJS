@@ -1,3 +1,6 @@
+/*Sebastian Serrano Division Z parcial 2020 punto 3
+
+
 /*Enunciado:
 Bienvenidos.
 En el ingreso a un viaje en avion nos solicitan nombre , edad, sexo("f" o "m") y estado civil("soltero", "casado" o "viudo")
